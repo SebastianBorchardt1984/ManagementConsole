@@ -1,0 +1,21 @@
+[
+    [
+        "name" : "CustomTask",
+        "displayName" : "Custom Task",
+        "icon" : "defaultservicenodeicon.png"
+        "category" : "CustomTasks",
+        "documentation" : "Basic minimal custom task.",
+ 
+    "parameters" : [
+        "path" : new StringDataType(),
+        "ContentData" : new ObjectDataType(),
+        "method": new StringDataType,
+        "host" : new StringDataType(),
+        "port" : new IntegerDataType(),
+        
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ]
+    ]
+]

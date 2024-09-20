@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="org.aoknordost.axxxxx_prozess" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_788CBC73-F877-45F2-8085-1EAF28CBEB69" name="route_on_processstatus" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="org.aoknordost.axxxxx_prozess">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_0D4CC1C8-EA1B-4F62-B008-233E72915B06" name="tVersicherungszeit" isCollection="false">
+    <dmn:itemComponent id="_A956825F-757C-48D8-B7F0-2C91CE872790" name="tbid" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_4DCD2525-5E95-42CF-B3E2-98565747FEB4" name="geschäftspartnernummer" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_330CA560-B951-4CB6-8D49-0107D0EB4C28" name="versicherungszeitentyp" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_BCF0DADE-F726-46D6-9149-AD3FBDFC1C74" name="versicherungsart" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B9B0B721-E344-48E3-BBF3-E172D01ED1B9" name="storno" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D7A7E3E0-FBAB-480F-BDFA-CD07CB09E811" name="interimskennzeichen" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_07CE9889-14A4-437A-9972-189F4983D861" name="beginn" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6F75AAB6-8E10-4CBF-8C42-B2AB70811353" name="ende" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_93980862-D420-4255-A125-A16402696F74" name="tVersicherungszeiten" isCollection="true">
+    <dmn:typeRef>tVersicherungszeit</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_890AA517-D215-42CF-B369-3522A468208F" name="tStammdaten" isCollection="false">
+    <dmn:itemComponent id="_FFC0DA48-6377-48A1-AEA6-166514AB1210" name="gpnr" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1529A65E-2E98-46A8-9C30-874DD9DD14A7" name="pkrv" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D1EF6B3E-F2B4-4C8E-BDBF-28477CFA6DA4" name="pkkv" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5031A1B8-9986-4DC7-BBAB-C0EDB719D4D7" name="pkkvde" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_A6EC0A24-B213-41D9-99F0-4A6BD67CCEC3" name="geburtsdatum" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_7B7BD8D9-4F7C-4FB7-8C1A-8A663B4104E8" name="vorname" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_57F69AAD-A3EB-47A2-A1A8-2898C005FF21" name="nachname" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_6DF0735F-BE8A-407E-BC29-DBBBCF600B5D" name="alter" isCollection="false">
+    <dmn:typeRef>number</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_5A9B80C3-79E2-4EBE-A2DD-80EC795B8BB3" name="status">
+    <dmn:extensionElements/>
+    <dmn:variable id="_9DD3CAD8-C8D7-4654-94E5-F6D0491A1CB8" name="status" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_BFDDC9B2-A8EB-47CE-BE36-33250C949DA0" name="currentTask">
+    <dmn:extensionElements/>
+    <dmn:variable id="_FDFF7D71-2257-463F-BCCF-72FAB1734444" name="currentTask" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:decision id="_0A3F36AC-5AAD-4960-A3EA-B70705E2228B" name="Route">
+    <dmn:extensionElements/>
+    <dmn:variable id="_A4CCA409-3C1E-4BDB-87F5-63D1403BE195" name="Route" typeRef="string"/>
+    <dmn:informationRequirement id="_814EE900-2D1F-4C19-BF85-224FDE4D1C91">
+      <dmn:requiredInput href="#_5A9B80C3-79E2-4EBE-A2DD-80EC795B8BB3"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_CCCA78E7-6875-4A7E-8F04-67E6286768AD">
+      <dmn:requiredInput href="#_BFDDC9B2-A8EB-47CE-BE36-33250C949DA0"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_CF86CE71-C402-491A-AA01-91E99101195D" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_CC2B27EF-291C-4106-9E6C-A658A39EE615">
+        <dmn:inputExpression id="_02AE256B-99E1-4339-8EE9-3BA7DF4444C5" typeRef="string">
+          <dmn:text>status</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_1AEC82DB-AD13-4F26-9C19-CF641502A6D7">
+        <dmn:inputExpression id="_FEB94690-5C2A-46E8-B34D-3CBD97D75D7B" typeRef="string">
+          <dmn:text>currentTask</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_0F5728F4-8B84-448C-9220-3EAC06DC2EDF"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_ACE16D3B-0BF5-4267-A370-43B0E869D088">
+        <dmn:inputEntry id="_79BA4F77-AE15-4B3D-80AA-29EBC73BEBBA">
+          <dmn:text>"NEW"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_093D2CB7-0627-4586-83EB-32778E307486">
+          <dmn:text>"start"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_4760FF27-58DB-48D6-ADC3-F03BC57E287E">
+          <dmn:text>"/anspruch_ermitteln"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>"Teilprozess Anspruch ermitteln"</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_39BD5099-861B-4380-B9ED-22692FD8917F">
+        <dmn:inputEntry id="_28FFC761-3573-42A1-A5E4-B17FA82CECE3">
+          <dmn:text>"PROGRESS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0065046B-EBA4-4E98-A973-8577A73760AC">
+          <dmn:text>"start"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_65AB7164-EC8E-4AEC-9D52-76C29E230F05">
+          <dmn:text>"/anspruch_ermitteln"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>"Teilprozess Anspruch ermitteln"</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_D311FB6C-2039-4AFE-B042-CA46066D7E7D">
+        <dmn:inputEntry id="_297B993D-AB07-4798-A458-EF5CA42E7368">
+          <dmn:text>"PROGRESS"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2A4ED9F4-2106-4733-A610-837FFB4F6FA1">
+          <dmn:text>"Merkmal Speichern"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_D9B2CFF7-EC91-4ED9-9A2F-5FB37C24D54E">
+          <dmn:text>"/merkmal_speichern"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text>"Teilprozess Merkmal speichern"</dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_867B30CD-E940-40C7-94B1-F96BA4456913" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_CF86CE71-C402-491A-AA01-91E99101195D">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>237</kie:width>
+            <kie:width>233</kie:width>
+            <kie:width>366</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_5A9B80C3-79E2-4EBE-A2DD-80EC795B8BB3" dmnElementRef="_5A9B80C3-79E2-4EBE-A2DD-80EC795B8BB3" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="451" y="588" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_BFDDC9B2-A8EB-47CE-BE36-33250C949DA0" dmnElementRef="_BFDDC9B2-A8EB-47CE-BE36-33250C949DA0" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="627" y="588" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_0A3F36AC-5AAD-4960-A3EA-B70705E2228B" dmnElementRef="_0A3F36AC-5AAD-4960-A3EA-B70705E2228B" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="540" y="485" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_814EE900-2D1F-4C19-BF85-224FDE4D1C91-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_814EE900-2D1F-4C19-BF85-224FDE4D1C91">
+        <di:waypoint x="501" y="588"/>
+        <di:waypoint x="590" y="535"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_CCCA78E7-6875-4A7E-8F04-67E6286768AD" dmnElementRef="_CCCA78E7-6875-4A7E-8F04-67E6286768AD">
+        <di:waypoint x="677" y="613"/>
+        <di:waypoint x="590" y="535"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
